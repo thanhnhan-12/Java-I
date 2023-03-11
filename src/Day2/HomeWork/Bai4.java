@@ -18,7 +18,7 @@ public class Bai4 {
 
     if (a == 0 && b != 0) {
       System.out.println("Phuong trinh vo nghiem");
-    } else if (a > 0) {
+    } else if (a != 0 && b != 0) {
 
       System.out.println("Phuong trinh co mot nghiem duy nhat x = " + (-b * 1.0 / a));
 
