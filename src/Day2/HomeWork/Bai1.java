@@ -26,5 +26,6 @@ public class Bai1 {
 
     System.out.print("Thong tin ca nhan: " + "\n- Ten " + name + "\n- Tuoi: " + age + "\n- Diem: " + grade + "\n- Dia chi: " + address );
 
+    sc.close();
   }
 }

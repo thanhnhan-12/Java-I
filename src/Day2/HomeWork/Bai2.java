@@ -23,5 +23,7 @@ public class Bai2 {
     }
 
     System.out.println("\nMax: " + ((Number1 >= Number2 ) ? Number1 : Number2));
+
+    sc.close();
   }
 }

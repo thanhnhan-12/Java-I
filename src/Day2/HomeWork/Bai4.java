@@ -26,5 +26,7 @@ public class Bai4 {
       System.out.println("Phuong trinh co vo so nghiem");
     }
 
+    sc.close();
+
   }
 }

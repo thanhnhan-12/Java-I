@@ -2,7 +2,7 @@ package Day2.HomeWork;
 
 import java.util.Scanner;
 
-public class Cau5 {
+public class Bai5 {
   public static void main(String[] args) {
     /*
      * 
@@ -32,5 +32,8 @@ public class Cau5 {
      if(grade < 5) {
       System.out.println("Kem");
      }
+
+    sc.close();
+
   }
 }

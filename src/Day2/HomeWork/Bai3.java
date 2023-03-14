@@ -20,5 +20,6 @@ public class Bai3 {
       System.out.println("Not 0");
     }
 
+    sc.close();
   }
 }
