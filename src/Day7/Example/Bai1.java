@@ -43,7 +43,6 @@ public class Bai1 {
     return width * height;
   }
 
-
   public static void main(String[] args) {
     Bai1 recPer = new Bai1(4, 5);
     Bai1 recArea = new Bai1(2, 3);

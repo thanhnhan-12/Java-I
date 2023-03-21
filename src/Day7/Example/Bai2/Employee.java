@@ -30,10 +30,5 @@ public class Employee {
     this.salary = salary;
   }
 
-  /* 4. Methods */
   
-
-  public static void main(String[] args) {
-    
-  }
 }
