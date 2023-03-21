@@ -1,15 +1,15 @@
 package Day7.HomeWork;
 
-public class Bai1 {
+public class BankAccount {
   // 1. Variables
   static int count = 0;
   private double balance;
   private int id;
 
   // 2. Constructor
-  public Bai1() {}
+  public BankAccount() {}
 
-  public Bai1(double balance) {
+  public BankAccount(double balance) {
     this.balance = balance;
     id = ++count;
   }
