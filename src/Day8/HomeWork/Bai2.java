@@ -24,7 +24,6 @@ public class Bai2 {
   public static void main(String[] args) {
     Scanner sc = new Scanner(System.in);
 
-
     System.out.print("Nhap so luong phan tu cho mang: ");
     int number = sc.nextInt();
 
