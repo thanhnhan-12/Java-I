@@ -30,10 +30,9 @@ public class Bai2 {
     int[] arr = new int[number];
 
     try {
-      for(int i = 0; i < arr.length; i++) {
-        inputArray(arr);
-        outputArray(arr);        
-      }
+      inputArray(arr);
+      outputArray(arr);        
+      
     } catch (Exception e) {
       System.out.println("Error handled ");
     }

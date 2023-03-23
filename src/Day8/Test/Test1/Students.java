@@ -1,83 +1,79 @@
 package Day8.Test.Test1;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Students {
-  /* 1. Variables */
-  static int count = 0;
   private int id;
   private String studentName;
   private int semester;
   private String courseName;
 
-  /* 2. Constructor */
-  public Students() {}
-
-  public Students(String studentName, int semester, String courseName) {
+  public Students(int id, String studentName, int semester, String courseName) {
+    this.id = id;
     this.studentName = studentName;
     this.semester = semester;
     this.courseName = courseName;
-    id = ++count;
   }
 
-  /* 3. Getter and Setter */
   public int getId() {
     return id;
-  }
-
-  public void setId(int id) {
-    this.id = id;
   }
 
   public String getStudentName() {
     return studentName;
   }
 
-  public void setStudentName(String studentName) {
-    this.studentName = studentName;
-  }
-
   public int getSemester() {
     return semester;
-  }
-
-  public void setSemester(int semester) {
-    this.semester = semester;
   }
 
   public String getCourseName() {
     return courseName;
   }
 
-  public void setCourseName(String courseName) {
-    this.courseName = courseName;
-  }
-  
-  /* 4 Methods */
-  // 4.1. Create
-  public void createStudents() {
-    Scanner sc = new Scanner(System.in);
+  public static ArrayList<Students> createStudents() {
+    Scanner scanner = new Scanner(System.in);
+    ArrayList<Students> students = new ArrayList<>();
+    while (students.size() < 3) {
+      System.out.print("Enter student ID: ");
+      int id = scanner.nextInt();
+      scanner.nextLine(); // consume newline character
+      System.out.print("Enter student name: ");
+      String name = scanner.nextLine();
+      System.out.print("Enter semester: ");
+      int semester = scanner.nextInt();
+      scanner.nextLine(); // consume newline character
+      System.out.print("Enter course name: ");
+      String course = scanner.nextLine();
+      students.add(new Students(id, name, semester, course));
 
-    System.out.println("Nhap vao so luong hoc sinh: ");
-    int numberOfStudents = sc.nextInt();
-
-    while (true) {
-      if(numberOfStudents > 3) {
-        System.out.println("Nhap hoc sinh thu: " + id);
-        studentName = sc.nextLine();
-        System.out.println("Nhap ky hoc: ");
-        semester = sc.nextInt();
-        System.out.println("Nhap khoa hoc: ");
-        courseName = sc.nextLine();
+      if (students.size() >= 3) {
+        System.out.print("Do you want to continue (Y/N)? ");
+        String answer = scanner.nextLine();
+        if (answer.equalsIgnoreCase("N")) {
+          break;
+        }
       }
+    }
+    scanner.close();
+    return students;
+  }
+
+  public static void printStudents(ArrayList<Students> students) {
+    System.out.println("------ Information ------");
+    for (Students student : students) {
+      System.out.println("ID: " + student.getId());
+      System.out.println("Name: " + student.getStudentName());
+      System.out.println("Semester: " + student.getSemester());
+      System.out.println("Course: " + student.getCourseName());
+      System.out.println("----------------------------------");
     }
   }
 
-  // 4.2 Find/ Sort
-
-  
-  // 4.3 Update/ Delete
-
-  // 4.4 Report
+  public static void main(String[] args) {
+    ArrayList<Students> students = createStudents();
+    printStudents(students);
+  }
 
 }
