@@ -2,16 +2,15 @@ package Day7.HomeWork;
 
 public class BankAccount {
   // 1. Variables
-  static int count = 0;
   private double balance;
   private int id;
 
   // 2. Constructor
   public BankAccount() {}
 
-  public BankAccount(double balance) {
+  public BankAccount(double balance, int id) {
     this.balance = balance;
-    this.id = ++count;
+    this.id = id;
   }
 
   // 3. Getter and Setter
@@ -21,6 +20,14 @@ public class BankAccount {
 
   public void setBalance(double balance) {
     this.balance = balance;
+  }
+
+  public int getId() {
+    return id;
+  }
+
+  public void setId(int id) {
+    this.id = id;
   }
 
   // 4. Methods
