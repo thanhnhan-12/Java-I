@@ -11,7 +11,7 @@ public class BankAccount {
 
   public BankAccount(double balance) {
     this.balance = balance;
-    id = ++count;
+    this.id = ++count;
   }
 
   // 3. Getter and Setter
