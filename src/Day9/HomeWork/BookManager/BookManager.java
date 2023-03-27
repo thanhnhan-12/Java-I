@@ -54,10 +54,10 @@ public class BookManager {
   public void searchBooks() {
     Scanner scanner = new Scanner(System.in);
 
-    System.out.print("Enter keyword: ");
+    System.out.print("Enter Name of Book: ");
     String keyword = scanner.nextLine();
 
-    System.out.println("ID\tName\tAuthor\tCategory\tISBN\tPrice");
+    System.out.println("ID \tName \tAuthor \tCategory \tISBN \tPrice");
     for (Book book : bookList) {
       if (book.getTitle().contains(keyword)) {
         System.out.println(book);

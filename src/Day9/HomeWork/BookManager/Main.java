@@ -8,7 +8,7 @@ public class Main {
     BookManager bookManager = new BookManager();
 
     while (true) {
-      System.out.println("WELCOME TO BOOK MANAGER");
+      System.out.println("---------- WELCOME TO BOOK MANAGER ----------");
       System.out.println("1. Add book");
       System.out.println("2. Search books");
       System.out.println("3. Update/Delete book");
