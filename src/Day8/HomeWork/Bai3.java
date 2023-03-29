@@ -28,14 +28,14 @@ public class Bai3 {
         throw new ArithmeticException("Loi tuoi");
 
       System.out.println("----- Thong tin -----");
-      System.out.println("ID: " + id);
+      System.out.println("ID       : " + id);
       System.out.println("Ho va ten: " + name);
-      System.out.println("Tuoi: " + age);
+      System.out.println("Tuoi     : " + age);
 
-    } catch (InputMismatchException e) {
+    } catch (ArithmeticException e) {
       System.out.println("Loi id hoac tuoi");
       
-    } catch (Exception e) {
+    } catch (InputMismatchException e) {
       System.out.println("Chuong trinh tiep tuc");
     }
 
